@@ -14,6 +14,31 @@
    ============================================================================ */
 
 
-require_once '../config.php'; // Stellen Sie sicher, dass dies auf Ihre tatsächliche Konfigurationsdatei verweist
+require_once 'config.php'; // Stellen Sie sicher, dass dies auf Ihre tatsächliche Konfigurationsdatei verweist
 
 header('Content-Type: application/json');
+
+try {
+
+    // PDO-Verbindung herstellen
+    $pdo = new PDO($dsn, $username, $password, $options);
+
+    $sql = "SELECT * FROM Weather w JOIN Location l ON w.location_id = l.id;";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    $data = $stmt->fetchAll();
+
+    http_response_code(200);
+    echo json_encode($data);
+
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Serverfehler beim Datenbankzugriff.']);
+    exit;
+}
+
+
+
+

@@ -16,7 +16,7 @@
 
 // Transformations-Skript  als 'transform.php' einbinden
 $weatherdata = include('transform.php');
-print_r($weatherdata);
+// print_r($weatherdata);
 
 // Dekodiere die JSON-Daten zu einem Array
 // Binde die Datenbankkonfiguration ein
