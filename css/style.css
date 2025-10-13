@@ -1,3 +1,322 @@
 * {
-    background-color: pink;
+  font-family: 'Inter', sans-serif;
 }
+
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh; /* Ganze Seite füllen */
+}
+
+.swiper-slide {
+  height: 100vh; /* Ganze Seite füllen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  scroll-snap-align: start; /* Jede Section rastet oben ein */
+  height: 100vh; /* Ganze Seite füllen */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;;
+  align-items: center;
+}
+
+/* Pfeile */
+.swiper-button-next,
+.swiper-button-prev {
+  position: fixed; /* bleibt beim Scrollen/Swipen an fester Position */
+  top: 50%;
+  transform: translateY(-50%);
+  color: white !important;
+  z-index: 9999; /* immer über dem Inhalt */
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+/* Positionierung links/rechts */
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+/* Pages */
+
+
+#noon_goodweather {
+    background-color: #FDF6E6; /* Hellbeige */
+}
+
+#morning_goodweather {
+    background-color: #D2C9DA; /* Hellbeige */
+}
+
+#evening_goodweather {
+    background-color: #DFD9E4; /* Hellbeige */
+}
+
+#noon_badweather{
+    background-color: #93B7D9; /* Hellbeige */
+}
+
+#morning_badweather {
+    background-color: #014886; /* Hellbeige */
+}
+
+#evening_badweather {
+    background-color: #014886; /* Hellbeige */
+}
+
+.weatherdata_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: #000;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 800; 
+    line-height: 50px;
+}
+
+.sun{
+    width: 100px;       
+    height: auto;      
+    margin: 20px 20px;
+}
+/* start, diagram, date selector pages */
+
+
+.frontpage {
+    width: 100%;
+    height: 100vh; /* Ganze Seite füllen */
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center;     
+    text-align: center;    
+    background-color: #AEC8B3;   
+    font-weight: 400;   
+}
+
+.frontpage h1 {
+    font-size: 3rem; /* larger and responsive */
+    margin: 0 0 1rem 0;
+    color: #000;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 800; 
+    line-height: 50px;
+}
+
+.image {
+    width: 30%;       
+    height: auto;      
+    margin: 50px 50px;
+}
+
+.button {
+    border-radius: 30px;
+    border: 5px solid #FFCC59;
+    background: #CEDDA6; 
+    width: 226px;
+    height: 53px;
+    flex-shrink: 0; 
+    
+    color: #000;
+    text-align: center;
+    font-family: "Konkhmer Sleokchher", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.button:hover {
+    background-color: #45a04900;
+    color: #FFCC59;
+}
+
+
+.button_input{
+    border-radius: 30px;
+    border: 5px solid #FFCC59;
+    background: #CEDDA6; 
+    width: 226px;
+    height: 53px;
+    flex-shrink: 0; 
+    color: #000;
+    text-align: center;
+    font-family: "Konkhmer Sleokchher", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 15px 15px;
+}
+
+.date_selector_normal{
+    width: 100%;
+    height: 100vh; /* Ganze Seite füllen */
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center;     
+    text-align: center;
+}
+
+.Diagram_page{
+    width: 100%;
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: flex-start;   /* statt center */
+    height: 100vh;               
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;  
+    background-color: #AEC8B3;   
+    font-weight: 400;   
+}
+
+.oval_diagram{
+    position: absolute;
+    top: 33%;          /* verschiebt das Oval nach unten, sodass nur die oberen zwei Drittel sichtbar sind */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;       /* Breite kann angepasst werden */
+    height: auto;
+    z-index: 0;
+}
+
+
+h1.big_header,
+.big_header,
+button.button,
+.chart-container {
+    position: relative;
+    z-index: 1; /* soll alles über dem SVG liegen */
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;             
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;             
+}
+
+
+.button, .selected_date {
+    border-radius: 30px;
+    border: 5px solid #FFCC59;
+    background: #CEDDA6; 
+
+    /* width und height entfernen */
+    padding: 10px 30px;  /* oben/unten 10px, links/rechts 30px */
+
+    color: #000;
+    text-align: center;
+    font-family: "Konkhmer Sleokchher", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.Date_selector_diagram{
+    width: 100%;
+    height: 100vh; /* ganze Seite füllen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* alles vertikal zentrieren */
+    text-align: center;
+    gap: 20px; /* Abstand zwischen Elementen */
+    background-color: #AEC8B3;   
+    font-weight: 400;   
+}
+
+.Date_selector_diagram .big_header {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.date-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Texte linksbündig */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.Date_selector_diagram h2.Fliesstext {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #000;
+}
+
+.Date_selector_diagram .button_input {
+    border-radius: 30px;
+    border: 5px solid #FFCC59;
+    background: #CEDDA6; 
+    height: 53px;           /* feste Höhe für sauberes Vertikal-Layout */
+    line-height: 43px;      /* leicht kleiner als Höhe → Text mittiger */
+    padding: 0 30px;        /* oben/unten kein Padding, nur seitlich */
+    
+    color: #000;
+    text-align: center;
+    font-family: "Konkhmer Sleokchher", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.top_row{
+  display: flex;              /* Elemente nebeneinander */
+  align-items: center;        /* Vertikal zentrieren */
+  gap: 1rem;                  /* Abstand zwischen den beiden */
+  margin-top: 10px;
+}
+
+.graphic_icon {
+    display: inline-block;
+    width: 60px;            /* feste Größe für das Icon */
+    height: 60px;
+    background-image: url(../img/icon_diagram.svg);
+    background-size: contain; /* Icon vollständig anzeigen */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.graphic_icon:hover {
+    background-image: url(../img/icon_diagram_hover.svg); /* Pfad zum Hover-Icon */
+}
+
