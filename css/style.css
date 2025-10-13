@@ -135,9 +135,8 @@ h1 {
     line-height: 50px;
 }
 
-.image {
-    width: 30%;       
-    height: auto;      
+.image_plant {
+    width: 30%;         
     margin: 50px 50px;
 }
 
@@ -188,6 +187,7 @@ h1 {
     align-items: center;         
     justify-content: center;     
     text-align: center;
+    background-color: #AEC8B3;
 }
 
 .Diagram_page{
@@ -299,13 +299,6 @@ button.button,
     font-weight: 500;
 }
 
-.top_row{
-  display: flex;              /* Elemente nebeneinander */
-  align-items: center;        /* Vertikal zentrieren */
-  gap: 1rem;                  /* Abstand zwischen den beiden */
-  margin-top: 10px;
-}
-
 .graphic_icon {
     display: inline-block;
     width: 60px;            /* feste Größe für das Icon */
@@ -339,4 +332,101 @@ button.button,
 
 #date_overlay_page {
   display: none;
+}
+
+
+.top_row {
+    position: fixed;
+    width: 100%;
+    height: 78px;                
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0px 40px; 
+    gap: 1rem;                  /* Abstand zwischen den beiden */
+    margin-top: 10px;          
+}
+
+#graphic_button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px; 
+}
+
+.temperature_unit {
+    font-size: 1.6rem;
+    font-weight: 800;            
+    text-align: right; 
+    color: #000; 
+    margin-right: 50px; 
+}
+
+.dropdown_container {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%); /* center horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dropdown_button {
+    padding: 10px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown_container:hover .dropdown_content { 
+    display: block; }
+
+.dropdown_content {
+    display: none; 
+    position: absolute;
+    top: 100%;             
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    z-index: 10001;
+    min-width: 140px;
+    text-align: center;
+}
+
+.dropdown_content li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown_content li:hover {
+  background-color: #f0f0f0;
+}
+
+
+.sun {
+    width: 350px;       
+    height: auto;      
+    margin: 20px 20px;
+}
+
+#weather_container{
+    width: 350px;
+    height: auto;      
+    margin: 20px 20px;
+
+}
+
+#time {
+    margin-top: 200px;        /* gleiche Höhe wie Top Row, damit es direkt darunter erscheint */
+    text-align: center;       /* optional: zentriert unter Dropdown */
+    font-size: 1.3rem;
+    font-weight: 600;
 }
