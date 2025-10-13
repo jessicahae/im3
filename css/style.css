@@ -320,3 +320,23 @@ button.button,
     background-image: url(../img/icon_diagram_hover.svg); /* Pfad zum Hover-Icon */
 }
 
+#graphic_button {
+  width: 60px;
+  height: 60px;
+  cursor: pointer; /* macht den Cursor beim Hover klickbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#date_selector_page {
+  display: none;
+}
+
+#diagram_page {
+  display: none;
+}
+
+#date_overlay_page {
+  display: none;
+}
