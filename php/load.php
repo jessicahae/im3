@@ -28,7 +28,7 @@ try {
     $pdo = new PDO($dsn, $username, $password, $options);
 
     // SQL-Query mit Platzhaltern für das Einfügen von Daten
-    $sql = "INSERT INTO `Weather`(`location_id`, `temperature`, `humidity`, `rain`, `weather_code`, `windspeed`) VALUES (:location_id, :temperature, :humidity, :rain, :weather_code, :windspeed)";
+    $sql = "INSERT INTO `Weather`(`location_id`, `temperature`, `humidity`, `rain`, `weather_code`, `windspeed`, `cloud_cover`) VALUES (:location_id, :temperature, :humidity, :rain, :weather_code, :windspeed, :cloud_cover)";
     // Bereitet die SQL-Anweisung vor
     $stmt = $pdo->prepare($sql);
 
@@ -40,7 +40,8 @@ try {
             ':humidity' => $item['humidity'],
             ':rain' => $item['rain'],
             ':weather_code' => $item['weather_code'],
-            ':windspeed' => $item['windspeed']
+            ':windspeed' => $item['windspeed'],
+            ':cloud_cover' => $item['cloud_cover']
         ]);
     }
 

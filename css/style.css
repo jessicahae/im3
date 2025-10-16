@@ -1,158 +1,189 @@
 * {
-  font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
 
 
 html,
 body {
-  position: relative;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .swiper-container {
-  width: 100%;
-  height: 100vh; /* Ganze Seite füllen */
+    width: 100%;
+    height: 100vh;
+    /* Ganze Seite füllen */
 }
 
 .swiper-slide {
-  height: 100vh; /* Ganze Seite füllen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 100vh;
+    /* Ganze Seite füllen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .page {
-  scroll-snap-align: start; /* Jede Section rastet oben ein */
-  height: 100vh; /* Ganze Seite füllen */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;;
-  align-items: center;
+    scroll-snap-align: start;
+    /* Jede Section rastet oben ein */
+    height: 100vh;
+    /* Ganze Seite füllen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    ;
+    align-items: center;
+    position:relative;
+}
+
+.swiper-slide.page {
+    direction: ltr;
 }
 
 /* Pfeile */
 .swiper-button-next,
 .swiper-button-prev {
-  position: fixed; /* bleibt beim Scrollen/Swipen an fester Position */
-  top: 50%;
-  transform: translateY(-50%);
-  color: white !important;
-  z-index: 9999; /* immer über dem Inhalt */
-  opacity: 0.8;
-  transition: opacity 0.3s;
+    position: fixed;
+    /* bleibt beim Scrollen/Swipen an fester Position */
+    top: 50%;
+    transform: translateY(-50%);
+    color: white !important;
+    z-index: 9999;
+    /* immer über dem Inhalt */
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* Positionierung links/rechts */
 .swiper-button-prev {
-  left: 20px;
+    left: 20px;
 }
 
 .swiper-button-next {
-  right: 20px;
+    right: 20px;
 }
 
 /* Pages */
 
 
 #noon_goodweather {
-    background-color: #FDF6E6; /* Hellbeige */
+    background-color: #FDF6E6;
+    /* Hellbeige */
 }
 
 #morning_goodweather {
-    background-color: #D2C9DA; /* Hellbeige */
+    background-color: #D2C9DA;
+    /* Hellbeige */
 }
 
 #evening_goodweather {
-    background-color: #DFD9E4; /* Hellbeige */
+    background-color: #DFD9E4;
+    /* Hellbeige */
 }
 
-#noon_badweather{
-    background-color: #93B7D9; /* Hellbeige */
+#noon_badweather {
+    background-color: #93B7D9;
+    /* Hellbeige */
 }
 
 #morning_badweather {
-    background-color: #014886; /* Hellbeige */
+    background-color: #014886;
+    /* Hellbeige */
 }
 
 #evening_badweather {
-    background-color: #014886; /* Hellbeige */
+    background-color: #014886;
+    /* Hellbeige */
 }
 
 .weatherdata_container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    gap: 1.3rem;
+    min-width:300px;
 }
 
-h1 {
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
-    color: #000;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 48px;
-    font-weight: 800; 
-    line-height: 50px;
+.weather_data {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.sun{
-    width: 100px;       
-    height: auto;      
-    margin: 20px 20px;
+.big_header {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0;
 }
-/* start, diagram, date selector pages */
+
+.sun {
+    width: 250px;
+    height: auto;
+    position: absolute;
+/*     z-index: 2; */
+}
+
+.top_left {
+    top: 0;
+    left: 30%;
+    transform: translate(-30%, -30%);
+}
+
+.center {
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom_right {
+    bottom: 0;
+    right: 30%;
+    transform: translate(30%, 30%);
+}
+
+
+
+
+
+/*frontpage & date select page & diagram page */
 
 
 .frontpage {
     width: 100%;
-    height: 100vh; /* Ganze Seite füllen */
-    display: flex;               
-    flex-direction: column;      
-    align-items: center;         
-    justify-content: center;     
-    text-align: center;    
-    background-color: #AEC8B3;   
-    font-weight: 400;   
-}
-
-.frontpage h1 {
-    font-size: 3rem; /* larger and responsive */
-    margin: 0 0 1rem 0;
-    color: #000;
+    height: 100vh;
+    /* Ganze Seite füllen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 48px;
-    font-weight: 800; 
-    line-height: 50px;
+    background-color: #AEC8B3;
+    font-weight: 400;
 }
 
 .image_plant {
-    width: 30%;         
+    width: 30%;
     margin: 50px 50px;
 }
 
 .button {
     border-radius: 30px;
     border: 5px solid #FFCC59;
-    background: #CEDDA6; 
+    background: #CEDDA6;
     width: 226px;
     height: 53px;
-    flex-shrink: 0; 
-    
-    color: #000;
+    flex-shrink: 0;
     text-align: center;
-    font-family: "Konkhmer Sleokchher", sans-serif;
     font-size: 25px;
-    font-style: normal;
     font-weight: 700;
     line-height: 30px;
 }
@@ -163,231 +194,301 @@ h1 {
 }
 
 
-.button_input{
+.button_input {
     border-radius: 30px;
     border: 5px solid #FFCC59;
-    background: #CEDDA6; 
+    background: #CEDDA6;
     width: 226px;
     height: 53px;
-    flex-shrink: 0; 
-    color: #000;
+    flex-shrink: 0;
     text-align: center;
-    font-family: "Konkhmer Sleokchher", sans-serif;
     font-size: 15px;
     font-weight: 500;
     line-height: 30px;
     margin: 15px 15px;
 }
 
-.date_selector_normal{
+.date_selector_page {
     width: 100%;
-    height: 100vh; /* Ganze Seite füllen */
-    display: flex;               
-    flex-direction: column;      
-    align-items: center;         
-    justify-content: center;     
+    height: 100vh;
+    /* Ganze Seite füllen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: #AEC8B3;
 }
 
-.Diagram_page{
+.diagram_page {
     width: 100%;
-    display: flex;               
-    flex-direction: column;      
-    align-items: center;         
-    justify-content: flex-start;   /* statt center */
-    height: 100vh;               
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* statt center */
+    height: 100vh;
     text-align: center;
-    position: relative;
+    /*     position: relative;
     overflow: hidden;
-    padding-top: 50px;  
-    background-color: #AEC8B3;   
-    font-weight: 400;   
+    padding-top: 50px;   */
+    background-color: #AEC8B3;
 }
 
-.oval_diagram{
+.oval_diagram {
     position: absolute;
-    top: 33%;          /* verschiebt das Oval nach unten, sodass nur die oberen zwei Drittel sichtbar sind */
+    top: 33%;
+    /* verschiebt das Oval nach unten, sodass nur die oberen zwei Drittel sichtbar sind */
     left: 50%;
     transform: translateX(-50%);
-    width: 120%;       /* Breite kann angepasst werden */
+    width: 120%;
+    /* Breite kann angepasst werden */
     height: auto;
     z-index: 0;
 }
 
-
-h1.big_header,
-.big_header,
-button.button,
-.chart-container {
-    position: relative;
-    z-index: 1; /* soll alles über dem SVG liegen */
-}
-
 .content-wrapper {
-    position: relative;
-    z-index: 1;             
+    /*     position: relative; */
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;             
+    gap: 20px;
 }
 
 
-.button, .selected_date {
+.selected_date,
+.button_input {
     border-radius: 30px;
     border: 5px solid #FFCC59;
-    background: #CEDDA6; 
-
-    /* width und height entfernen */
-    padding: 10px 30px;  /* oben/unten 10px, links/rechts 30px */
-
-    color: #000;
+    background: #CEDDA6;
+    padding: 10px 30px;
     text-align: center;
-    font-family: "Konkhmer Sleokchher", sans-serif;
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
 }
 
-.Date_selector_diagram{
+.date_selector_diagram {
     width: 100%;
-    height: 100vh; /* ganze Seite füllen */
+    height: 100vh;
+    /* ganze Seite füllen */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  /* alles vertikal zentrieren */
+    justify-content: center;
+    /* alles vertikal zentrieren */
     text-align: center;
-    gap: 20px; /* Abstand zwischen Elementen */
-    background-color: #AEC8B3;   
-    font-weight: 400;   
+    gap: 20px;
+    /* Abstand zwischen Elementen */
+    background-color: #AEC8B3;
 }
 
-.Date_selector_diagram .big_header {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.date-input-group {
+.date_input_group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Texte linksbündig */
+    align-items: flex-start;
+    /* Texte linksbündig */
     text-align: left;
     margin-bottom: 20px;
 }
 
-.Date_selector_diagram h2.Fliesstext {
+.fliesstext {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 5px 0;
-    color: #000;
 }
 
-.Date_selector_diagram .button_input {
-    border-radius: 30px;
-    border: 5px solid #FFCC59;
-    background: #CEDDA6; 
-    height: 53px;           /* feste Höhe für sauberes Vertikal-Layout */
-    line-height: 43px;      /* leicht kleiner als Höhe → Text mittiger */
-    padding: 0 30px;        /* oben/unten kein Padding, nur seitlich */
-    
-    color: #000;
+#date_selector_page {
+    display: none;
+}
+
+#diagram_page {
+    display: none;
+}
+
+#date_overlay_page {
+    display: none;
+}
+
+
+/* Swiper */
+
+
+
+#calendar_button {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    /* macht den Cursor beim Hover klickbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar_icon {
+    display: inline-block;
+    width: 60px;
+    /* feste Größe für das Icon */
+    height: 60px;
+    background-image: url(../img/icon_calendar.svg);
+    background-size: contain;
+    /* Icon vollständig anzeigen */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calendar_icon:hover {
+    background-image: url(../img/icon_calendar_hover.svg);
+    /* Pfad zum Hover-Icon */
+}
+
+.weather_value {
+    font-size: 1.6rem;
+    font-weight: 400;
+    float: left;
+    text-align: left;
+}
+
+.weather_label {
+    font-size: 1.6rem;
+    font-weight: 400;
+    float: right;
+    text-align: right;
+}
+
+.central_content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+}
+
+.weather_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.time {
+    margin-top: 270px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.day {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.weather_info{
+    white-space: nowrap;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.temperature {
+    font-size: 6.5rem;
+    font-weight: 800;
+}
+
+/* .day, .temperature {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    font-family: "Konkhmer Sleokchher", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+    z-index: 2;
+} */
+
+.date {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.date_label{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+    /* Overlay Leiste Swiper */
+
+.temperature_unit {
+    font-weight: 700;
+}
+
+.overlay {
+    position: absolute;
+    top: 20px; 
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    z-index: 1;
 }
 
 .graphic_icon {
-    display: inline-block;
-    width: 60px;            /* feste Größe für das Icon */
+    width: 60px;
     height: 60px;
     background-image: url(../img/icon_diagram.svg);
-    background-size: contain; /* Icon vollständig anzeigen */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .graphic_icon:hover {
-    background-image: url(../img/icon_diagram_hover.svg); /* Pfad zum Hover-Icon */
+    background-image: url(../img/icon_diagram_hover.svg);
+    /* Pfad zum Hover-Icon */
 }
 
 #graphic_button {
-  width: 60px;
-  height: 60px;
-  cursor: pointer; /* macht den Cursor beim Hover klickbar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#date_selector_page {
-  display: none;
-}
-
-#diagram_page {
-  display: none;
-}
-
-#date_overlay_page {
-  display: none;
-}
-
-
-.top_row {
-    position: fixed;
-    width: 100%;
-    height: 78px;                
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between; 
-    padding: 0px 40px; 
-    gap: 1rem;                  /* Abstand zwischen den beiden */
-    margin-top: 10px;          
-}
-
-#graphic_button{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 50px; 
-}
-
-.temperature_unit {
-    font-size: 1.6rem;
-    font-weight: 800;            
-    text-align: right; 
-    color: #000; 
-    margin-right: 50px; 
 }
 
 .dropdown_container {
     position: absolute;
     left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%); /* center horizontally and vertically */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translateX(-50%);
+    padding: 10px 24px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 #dropdown_button {
     padding: 10px 24px;
     font-size: 18px;
-    font-weight: 700;
-    white-space: nowrap;
+    font-weight: 600;
     background-color: transparent;
     border: none;
 }
 
-.dropdown_container:hover .dropdown_content { 
-    display: block; }
+.dropdown_container:hover .dropdown_content {
+    display: block;
+}
 
 .dropdown_content {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 100%;             
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
@@ -395,38 +496,16 @@ button.button,
     padding: 10px 0;
     margin: 0;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    z-index: 10001;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     min-width: 140px;
     text-align: center;
 }
 
 .dropdown_content li {
-  padding: 8px 16px;
-  cursor: pointer;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
 .dropdown_content li:hover {
-  background-color: #f0f0f0;
-}
-
-
-.sun {
-    width: 350px;       
-    height: auto;      
-    margin: 20px 20px;
-}
-
-#weather_container{
-    width: 350px;
-    height: auto;      
-    margin: 20px 20px;
-
-}
-
-#time {
-    margin-top: 200px;        /* gleiche Höhe wie Top Row, damit es direkt darunter erscheint */
-    text-align: center;       /* optional: zentriert unter Dropdown */
-    font-size: 1.3rem;
-    font-weight: 600;
+    background-color: #f0f0f0;
 }

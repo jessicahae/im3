@@ -123,7 +123,8 @@ foreach ($rawData as $locationIndex => $locationData) {
             'rain' => (float)$rain,
             'weather_code' => $weatherCodeString,
             'windspeed' => round((float)$windspeed, 2),
-            'timestamp' => $time
+            'timestamp' => $time,
+            'cloud_cover' => (int)$cloud_cover
         ];
     }
 }

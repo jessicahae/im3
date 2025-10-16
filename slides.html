@@ -13,112 +13,49 @@
 
 <body>
     <div id="swiper-container" class="swiper-container" dir="rtl">
-        <div class="swiper-wrapper">
-            <!-- Section 1 -->
-            <section id="noon_goodweather" class="swiper-slide page">
-                <div class="top_row">
-                    <div class="temperature_unit"> C°</div>
-                        
-                    <div class="dropdown_container">
-                        <button id="dropdown_button">Bern ▼</button>
-                        <ul class="dropdown_content">
-                            <li>Bern</li>
-                            <li>Zürich</li>
-                            <li>Geneva</li>
-                        </ul>
-                    </div>
-
-                    <div id="graphic_button">
-                        <div class="graphic_icon"></div>
-                    </div>
-
-                </div>
-
-                <div id="time">12:00</div>
-
-                <img class="sun noon_goodweather" src="img/Sun_pink.svg" alt="sun">
-                <div id="weather_container">
-                    <div id="day">
-                        <span><h1>Wednesday</h1></span>
-                        <span id="weather_info"> – It's sunny.</span>
-                    </div>
-                    <div id="temperature"> 25</div>
-                </div>
-
-                <div id="weatherdata_container">
-                    <div class="weather_data">
-                        <span class="weather_label">wind</span>
-                        <span>14km/h</span>
-                    </div>
-                    <div class="weather_data">
-                        <span class="weather_label">humidity</span>
-                        <span>72</span>
-                    </div>
-                    <div class="weather_data">
-                        <span class="weather_label">rain</span>
-                        <span>11mm</span>
-                    </div>
-                    <div class="weather_data">
-                        <span class="weather_label">cloud cover</span>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="date">
-                        <span id="calendar_button">
-                            <img class="calendar" src="../img/icon_calendar.svg" alt="calendar">
-                            <div class="calendar_hover"></div>
-                        </span>
-                        <span class="date_label">Septembre 22, 2025</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 2 -->
-            <section id="morning_goodweather" class="swiper-slide page">
-
-            </section>
-
-            <!-- Section 3 -->
-            <section id="evening_goodweather" class="swiper-slide page">
-
-            </section>
-
-            <!-- Section 4 -->
-            <section id="noon_badweather" class="swiper-slide page">
-
-            </section>
-
-            <!-- Section 5 -->
-            <section id="morning_badweather" class="swiper-slide page">
-
-            </section>
-
-            <!-- Section 6 -->
-            <section id="evening_badweather" class="swiper-slide page">
-
-            </section>
+        <div id="swiper-bundle" class="swiper-wrapper">
         </div>
 
         <div id="swiper-button-next" class="swiper-button-next"></div>
         <div id="swiper-button-prev" class="test swiper-button-prev"></div>
     </div>
 
-    <!-- Section overlay date selection -->
-    <section id="date_overlay_page" class="Date_selector_diagram">
-        <h1 class="big_header">Please enter time period:</h1>
-        <div class="date-input-group">
-            <h2 class="Fliesstext">From:</h2>
-            <button id="fromButton" class="button_input">Enter date</button>
+    <div id="overlay" class="overlay">
+
+        <div id="graphic_button">
+            <div class="graphic_icon"></div>
         </div>
-        <div class="date-input-group">
-            <h2 class="Fliesstext">To:</h2>
-            <button id="toButton" class="button_input">Enter date</button>
+
+
+        <div class="dropdown_container">
+            <button id="dropdown_button">Bern ▼</button>
+            <ul class="dropdown_content">
+                <li>Bern</li>
+                <li>Zürich</li>
+                <li>Geneva</li>
+            </ul>
+        </div>
+
+        <div class="temperature_unit"> C°</div>
+
+    </div>
+
+    <!-- Section overlay date selection -->
+    <section id="date_overlay_page" class="date_selector_diagram">
+        <h1 class="big_header">Please enter time period:</h1>
+        <div class="date_input_group">
+            <h2 class="fliesstext">From:</h2>
+            <input type="date" id="fromDate" class="date_input">
+        </div>
+        <div class="date_input_group">
+            <h2 class="fliesstext">To:</h2>
+            <input type="date" id="toDate" class="date_input" min="2025-10-07" max="2025-12-31">
         </div>
         <button id="nextButton" class="button">Next</button>
     </section>
 
     <!-- Section date selector diagram -->
-    <section id = "date_selector_page"class="date_selector_normal">
+    <section id="date_selector_page" class="date_selector_page">
         <h1 class="big_header">Please enter date:</h1>
         <button id="button_inputtext" class="button_input">Enter date</button>
         <button id="next_diagram_Button" class="button">Next</button>
@@ -127,14 +64,14 @@
 
 
     <!-- Section diagram -->
-    <section id="diagram_page" class="Diagram_page">
+    <section id="diagram_page" class="diagram_page">
         <img src="img/Background_Diagram_Page.svg" class="oval_diagram" alt="Backgroundcolor for Image">
         <div class="content-wrapper">
             <h1 class="big_header">Average data from</h1>
-            <div id="selected_date" class="selected_date">Platzhalter Datum</button>
-            </div>
-            <div class="chart-container">
-            </div>
+            <div id="selected_date" class="selected_date">Platzhalter Datum</div>
+        </div>
+        <div class="chart-container">
+        </div>
     </section>
 
 
