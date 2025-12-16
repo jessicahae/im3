@@ -68,6 +68,7 @@ const diagramPage = document.querySelector('#diagram_page');
 nextButton.addEventListener('click', () => {
   diagramPage.style.display = 'block';
   dateSelectorPage.style.display = 'none';
+  overlayContainer.style.display = 'none';
 });
 
 
@@ -230,44 +231,7 @@ function createSlides() {
                 </div>
             </section>`;
     container.innerHTML += template;
-    /*const time = entry.current_timecode.substring(11, 16); // z. B. "07:00"
-    const rain = entry.rain;
-    const isBadWeather = rain > 2;
 
-    // Zeitabschnitt bestimmen
-    let dayPart = '';
-    if (time.startsWith('07')) dayPart = 'morning';
-    else if (time.startsWith('12')) dayPart = 'noon';
-    else if (time.startsWith('20')) dayPart = 'evening';
-    else return; // kein Match → ignorieren
-
-    const weatherType = isBadWeather ? 'badweather' : 'goodweather';
-    const sectionId = `#${dayPart}_${weatherType}`;
-    const section = document.querySelector(sectionId);
-    if (!section) return;
-
-    // 🔹 Inhalte aktualisieren
-    const date = new Date(entry.current_timecode);
-    const formattedDate = date.toLocaleDateString('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric'
-    });
-    const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-    const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-
-    section.querySelector('.time').textContent = formattedTime;
-    section.querySelector('.temperature').textContent = entry.temperature;
-    section.querySelector('.weather_info').textContent = `– ${entry.weather_code}`;
-    section.querySelector('.day h1').textContent = dayName;
-    section.querySelector('.date_label').textContent = formattedDate;
-
-    const rows = section.querySelectorAll('.weather_data');
-    if (rows.length >= 3) {
-      rows[0].querySelector('span:nth-child(2)').textContent = `${entry.windspeed} km/h`;
-      rows[1].querySelector('span:nth-child(2)').textContent = `${entry.humidity}%`;
-      rows[2].querySelector('span:nth-child(2)').textContent = `${entry.rain} mm`;
-    }*/
   });
   swiper.update();
   const calendarButtons = document.querySelectorAll('.calendar_button');
@@ -276,7 +240,7 @@ function createSlides() {
     button.addEventListener('click', () => {
       dateOverlayPage.style.display = 'block';
       slideContainer.style.display = 'none';
-      overlayContainer.style.display = 'block';
+      overlayContainer.style.display = 'none';
     });
   });
 }
