@@ -33,10 +33,11 @@ Bei *Fehlern in der Datenübertragung* zwischen Datenbank und App war es oft sch
 ### genutzte Ressourcen
 Für unser Projekt haben wir oft mit Google Gemini gearbeitet. In einzelnen Fällen haben wir auch ChatGPT verwendet. Für folgende Arbeitsprozesse haben wir die KI's benutzt:
 	⁠Fehlersuche (Debugging)
-	
-> ⁠Unterstützung bei der Erstellung von komplexen SQL-Abfragen 
-> ⁠Bereinigung des Codes (vor allem in der CSS-Datei)
-> ⁠Erklärung von div. Arbeitsprozessen (Einbauen von Chart.js oder Kalender-Elementen, Filterung der API-Daten auf spezifische Zeitstempel)
+
+Die Entwicklung wurde durch KI-Tools unterstützt, insbesondere in folgenden Bereichen:
+- **Komplexe SQL-Abfragen:** Hilfe bei der Strukturierung der Datenbankabfragen.
+- **CSS Refactoring:** Bereinigung von redundantem Code und Optimierung für Responsive Design.
+- **Prozess-Verständnis:** Erklärungen zur Integration von Libraries (wie Chart.js), der Erstellung von Kalender-Komponenten und der Logik zur Filterung von API-Daten basierend auf Zeitstempeln.
 
 Zudem hatten wir stets die Möglichkeit, während des Unterrichts unsere Dozentinnen und Dozenten beizuziehen. Das war sehr hilfreich. 
 
