@@ -39,43 +39,47 @@
         <div class="temperature_unit"> C°</div>
 
     </div>
+    <section id="date_overlay_page" class="graphicpage">
+        <div class="close_button"></div>
+        <h1 class="big_header">Please enter date:</h1>
+        <div class="date_input_group">
+            <input type="date" id="fromDate" class="button_input" min="2025-01-01">
+        </div>
+        <button id="nextButton" class="button" type="button">Show from this date</button>
+        <img class="image_plant" src="img/Pflanze.svg" alt="Pflanze">
+    </section>
 
     <!-- Section overlay date selection -->
-    <section id="date_overlay_page" class="date_selector_diagram">
+    <section id="date_selector_page" class="graphicpage">
+        <div class="close_button"></div>
         <h1 class="big_header">Please enter time period:</h1>
-        <div class="date_input_group">
+        <div class="date_range_wrapper">
             <h2 class="fliesstext">From:</h2>
-            <input type="date" id="fromDate" class="date_input" min="2025-10-07">
-        </div>
-        <div class="date_input_group">
+            <input type="date" id="chartFromDate" class="button_input">
+
             <h2 class="fliesstext">To:</h2>
-            <input type="date" id="toDate" class="date_input" min="2025-10-07">
+            <input type="date" id="chartToDate" class="button_input">
         </div>
-        <button id="nextButton" class="button">Next</button>
+        <button id="next_diagram_Button" class="button" type="button">Show graphic</button>
     </section>
 
-    <!-- Section date selector diagram -->
-    <section id="date_selector_page" class="date_selector_page">
-        <h1 class="big_header">Please enter date:</h1>
-        <button id="button_inputtext" class="button_input">Enter date</button>
-        <button id="next_diagram_Button" class="button">Next</button>
-        <img class="image_plant" src="img/Pflanze.svg" alt="Pflanze mit Topf">
-    </section>
+    <section id="diagram_page" class="graphicpage">
+        <div class="close_button"></div>
+        <div class="chart_wrapper">
+            <h1 class="big_header">Average data from:</h1>
 
+            <div id="chart_date_display" class="button_input">
 
-    <!-- Section diagram -->
-    <section id="diagram_page" class="diagram_page">
-        <img src="img/Background_Diagram_Page.svg" class="oval_diagram" alt="Backgroundcolor for Image">
-        <div class="content-wrapper">
-            <h1 class="big_header">Average data from</h1>
-            <div id="selected_date" class="selected_date">Platzhalter Datum</div>
-        </div>
-        <div class="chart-container">
+            </div>
+            <div class="chart_box">
+                <canvas id="myWeatherChart"></canvas>
+            </div>
         </div>
     </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
 </body>
 
