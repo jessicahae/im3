@@ -34,11 +34,11 @@ Bei *Fehlern in der Datenübertragung* zwischen Datenbank und App war es oft sch
 Für unser Projekt haben wir oft mit Google Gemini gearbeitet. In einzelnen Fällen haben wir auch ChatGPT verwendet. Für folgende Arbeitsprozesse haben wir die KI's benutzt:
 	⁠Fehlersuche (Debugging)
 
-	⁠Unterstützung bei der Erstellung von komplexen SQL-Abfragen 
+	>⁠Unterstützung bei der Erstellung von komplexen SQL-Abfragen 
 
-	⁠Bereinigung des Codes (vor allem in der CSS-Datei)
+	>⁠Bereinigung des Codes (vor allem in der CSS-Datei)
 
-	⁠Erklärung von div. Arbeitsprozessen (Einbauen von Chart.js oder Kalender-Elementen, Filterung der API-Daten auf spezifische Zeitstempel)
+	>⁠Erklärung von div. Arbeitsprozessen (Einbauen von Chart.js oder Kalender-Elementen, Filterung der API-Daten auf spezifische Zeitstempel)
 
 Zudem hatten wir stets die Möglichkeit, während des Unterrichts unsere Dozentinnen und Dozenten beizuziehen. Das war sehr hilfreich. 
 
